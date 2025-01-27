@@ -39,7 +39,7 @@ Avant de commencer, assurez-vous d'avoir **Miniconda** installé sur votre machi
 
    - `autogrid_env.yml` : Pour AutoGrid4.
    - `meeko_env.yml` : Pour la préparation des ligands avec Meeko.
-   - `nglv_env.yml` : Pour des visualisations interactives avec NGLView.
+   - `nglv_env.yml` : Pour des visualisations interactives avec NGLView dans un notebook.
    - `scrubber_env.yml` : Pour le nettoyage des structures moléculaires avec Scrubber.
    - `vina_env.yml` : Pour l'exécution de dockings avec AutoDock Vina.
 
@@ -81,22 +81,6 @@ Exemple d'utilisation :
 
 ```bash
 python3 launch_vina.py --sf_name vina --receptor chemin/vers/recepteur.pdbqt --ligand chemin/vers/ligand.pdbqt --box chemin/vers/box.txt --output chemin/vers/output.pdbqt --exhaustiveness 32 --num_poses 10
-```
-
-### Commandes disponibles pour `visualize.py`
-
-Le script `visualize.py` permet de visualiser des molécules de manière interactive :
-
-- **file\_path** : Chemin vers le fichier contenant la molécule (PDB, MOL2, etc.) (obligatoire).
-- **--representation** : Mode d'affichage de la molécule (par défaut : `cartoon`).
-- **--width** : Largeur de la fenêtre de visualisation en pixels (par défaut : 800).
-- **--height** : Hauteur de la fenêtre de visualisation en pixels (par défaut : 600).
-- **--export\_html** : Chemin pour exporter la visualisation en HTML (optionnel).
-
-Exemple d'utilisation :
-
-```bash
-python3 visualize.py chemin/vers/fichier.pdb --representation ball+stick --width 1024 --height 768 --export_html chemin/vers/output.html
 ```
 
 ### Désinstallation des Environnements
