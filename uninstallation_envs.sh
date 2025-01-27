@@ -20,7 +20,7 @@ for yml_file in "$YML_DIR"/*.yml; do
             echo "Suppression de l'environnement Conda : $env_name"
             
             # Supprimer l'environnement Conda
-            conda env remove -n "$env_name"
+            conda env remove -n "$env_name" -y
             
             # Vérifier si la suppression a réussi
             if [ $? -eq 0 ]; then
